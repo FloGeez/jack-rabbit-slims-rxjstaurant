@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Rabbit Slim's Rxjs</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <style>
+      canvas {
+        border: 1px solid black;
+        position: relative;
+      }
+      .canvas-wrapper {
+        position: relative;
+      }
+      .canvas-wrapper:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        opacity: 0.1;
+        background-image: url("images/damier.png");
+        background-size: cover;
+      }
+      .logo {
+        width: 200px;
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
+        border-bottom: 100px solid #2f2f2f;
+      }
+      .logo > img {
+        display: block;
+        margin: auto;
+        max-width: 100px;
+        position: absolute;
+        left: 200px;
+        padding: 5px;
+        border-right: 1px solid white;
+      }
+      .logo > .text {
+        position: absolute;
+        margin-left: 120px;
+        margin-top: 18px;
+        color: white;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="images/jack-rabbit-slims.png" />
+      <div class="text">
+        <div id="fruitCounter"></div>
+        <div id="score"></div>
+        <div id="countdown"></div>
+      </div>
+    </div>
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="600" height="600"></canvas>
+    </div>
+    <script type="module" src="steps/step1.js"></script>
+  </body>
+</html>
